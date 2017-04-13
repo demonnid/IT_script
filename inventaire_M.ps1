@@ -1,4 +1,4 @@
-#This application will pull basic inventory information from a list of devices.  The devices list is sent C:\Users\emone\Desktop\taches EDEIS\Inventaire\result\names.txt and the output is pushed to a file C:\Users\emone\Desktop\taches EDEIS\Inventaire\result\computers.txt
+#This application will pull basic inventory information from a list of devices.  The devices list is sent <file_path>\names.txt and the output is pushed to a file <file_path>\computers.txt
 
 function Get-EnterpriseEnvironment{
 	param(
@@ -16,7 +16,7 @@ function Get-EnterpriseEnvironment{
 
 
                                 
-    			$prop=  @{
+    			$prop= [ordered]  @{
         			Name =$name.name 
                     Make = $name.manufacturer
                     Model = $name.model
@@ -39,4 +39,4 @@ function Get-EnterpriseEnvironment{
 	}
 }
 
-Get-Content C:\Users\emone\Desktop\taches_EDEIS\Inventaire\result\names.txt | Get-EnterpriseEnvironment | Export-csv C:\Users\emone\Desktop\taches_EDEIS\Inventaire\result\devices.csv 
+Get-Content <file_path>\names.txt | Get-EnterpriseEnvironment | Export-csv <file_path>\devices.csv 
