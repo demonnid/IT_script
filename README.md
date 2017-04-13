@@ -1,4 +1,4 @@
-# IT_script
+# IT_script / iventaire_M
 script for IT 
 first_script"inventaire_M.ps1" realise l'inventaire du fichier d'entrée names.txt et renvoi le résultat dans le fichier device.csv
 execution depuis une commmande dos en mode administrateur "powershell -executionpolicy bypass -File <file_Path>\inventaire_M.ps1
